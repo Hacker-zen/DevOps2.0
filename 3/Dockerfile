@@ -7,8 +7,6 @@ RUN npm ci --omit=dev && npm cache clean --force
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
-
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
 RUN mkdir -p /var/cache/nginx/client_temp /tmp/nginx_temp/proxy && \
