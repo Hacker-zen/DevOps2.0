@@ -1,4 +1,4 @@
-FROM node:18-alpine AS run
+FROM alpine:latest AS run
 
 WORKDIR /app/front
 COPY --from=build /app/front/build ./build
