@@ -1,4 +1,4 @@
-FROM node:18-alpine AS system
+FROM alpine:latest AS system
 
 RUN apk add --no-cache bash && rm -rf /var/cache/apk/*
 
